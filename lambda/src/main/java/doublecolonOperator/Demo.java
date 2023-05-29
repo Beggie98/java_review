@@ -2,6 +2,7 @@ package doublecolonOperator;
 
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
+import java.util.function.Function;
 
 public class Demo {
     public static void main(String[] args) {
@@ -36,6 +37,14 @@ public class Demo {
 
         Consumer<Integer> display2 = System.out::println;
         display2.accept(50);
+
+
+        BiFunction<MyClass, Integer, Double> v2 = MyClass::method;
+        //we are calling instance method through the class name with the help class type included in the interface
+        //we don't have to use new keyword now
+
+        BiFunction<String, String, String> v3 = String::concat;
+
 
     }
 }
