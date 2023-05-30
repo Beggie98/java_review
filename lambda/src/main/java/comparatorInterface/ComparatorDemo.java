@@ -23,13 +23,12 @@ public class ComparatorDemo {
         //through Lambda
         Collections.sort(list, ((o1,o2) -> (o1>o2) ? -1 :(02<01)? 1 : 0));
 
-        //Ascending
-
+        //Ascending using compareTo method
         list.sort((o1,o2) -> o1.compareTo(o2));
         System.out.println(list);
 
 
-        //Descending
+        //Descending using compareTo method
         list.sort((o2,o1) -> o1.compareTo(o2));
         System.out.println(list);
 
